@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.dennis</groupId>
-    <artifactId>QueueListVisualizer</artifactId>
+    <artifactId>StackListVisualizer</artifactId>
     <version>1.0</version>
     <name>QueueListVisualizer</name>
 
@@ -61,7 +61,7 @@
                     <execution>
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>de.dennis.qlvisualizer.App</mainClass>
+                            <mainClass>de.dennis.slvisualizer.App</mainClass>
                         </configuration>
                     </execution>
                 </executions>
@@ -75,7 +75,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>de.dennis.qlvisualizer.App</mainClass>
+                            <mainClass>de.dennis.slvisualizer.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -95,7 +95,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>de.dennis.qlvisualizer.App</mainClass>
+                                    <mainClass>de.dennis.slvisualizer.App</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>

@@ -1,7 +1,7 @@
-package de.dennis.qlvisualizer.Panes;
+package de.dennis.slvisualizer.Panes;
 
-import de.dennis.qlvisualizer.ListElement;
-import de.dennis.qlvisualizer.Main;
+import de.dennis.slvisualizer.ListElement;
+import de.dennis.slvisualizer.Main;
 import javafx.geometry.Insets;
 import javafx.scene.layout.HBox;
 

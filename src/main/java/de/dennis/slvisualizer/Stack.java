@@ -1,10 +1,10 @@
-package de.dennis.qlvisualizer;
+package de.dennis.slvisualizer;
 
-import de.dennis.qlvisualizer.Panes.ListView;
+import de.dennis.slvisualizer.Panes.ListView;
 import javafx.scene.control.ScrollPane;
 
 
-public class Queue extends ScrollPane {
+public class Stack extends ScrollPane {
 
     private final ListView LIST_VIEW = new ListView();
 
@@ -13,13 +13,13 @@ public class Queue extends ScrollPane {
     private ListElement first;
     private ListElement last;
 
-    public Queue(ListElement firstElement) {
+    public Stack(ListElement firstElement) {
         setContent(LIST_VIEW);
 
         addFirstElement(firstElement);
     }
 
-    public Queue() {
+    public Stack() {
         setContent(LIST_VIEW);
 
         setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);

@@ -1,4 +1,4 @@
-package de.dennis.qlvisualizer;
+package de.dennis.slvisualizer;
 
 public class App {
 

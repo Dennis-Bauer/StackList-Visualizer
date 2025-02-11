@@ -1,4 +1,4 @@
-package de.dennis.qlvisualizer.Utilities;
+package de.dennis.slvisualizer.Utilities;
 
 
 /**

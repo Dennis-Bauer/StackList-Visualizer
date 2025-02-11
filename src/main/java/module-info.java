@@ -1,7 +1,7 @@
-module de.dennis.qlvisualizer {
+module de.dennis.slvisualizer {
     requires javafx.controls;
     requires javafx.fxml;
 
-    opens de.dennis.qlvisualizer to javafx.fxml;
-    exports de.dennis.qlvisualizer;
+    opens de.dennis.slvisualizer to javafx.fxml;
+    exports de.dennis.slvisualizer;
 }

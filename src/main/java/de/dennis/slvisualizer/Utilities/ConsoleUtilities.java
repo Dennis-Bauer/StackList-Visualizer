@@ -1,4 +1,4 @@
-package de.dennis.qlvisualizer.Utilities;
+package de.dennis.slvisualizer.Utilities;
 
 /**
  *  <h2>Utilities for Java and JavaFx to create graphical programs</h2>

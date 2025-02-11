@@ -1,7 +1,7 @@
-package de.dennis.qlvisualizer.Panes;
+package de.dennis.slvisualizer.Panes;
 
-import de.dennis.qlvisualizer.Main;
-import de.dennis.qlvisualizer.Utilities.ArrowObjekt;
+import de.dennis.slvisualizer.Main;
+import de.dennis.slvisualizer.Utilities.ArrowObjekt;
 import javafx.geometry.Insets;
 import javafx.geometry.Point2D;
 import javafx.geometry.Pos;
@@ -16,8 +16,8 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.TextAlignment;
 
-import static de.dennis.qlvisualizer.Utilities.JavaFXConstructorUtilities.buildLabel;
-import static de.dennis.qlvisualizer.Utilities.JavaFXConstructorUtilities.buildRectangle;
+import static de.dennis.slvisualizer.Utilities.JavaFXConstructorUtilities.buildLabel;
+import static de.dennis.slvisualizer.Utilities.JavaFXConstructorUtilities.buildRectangle;
 
 public class ElementObjekt extends HBox {
 

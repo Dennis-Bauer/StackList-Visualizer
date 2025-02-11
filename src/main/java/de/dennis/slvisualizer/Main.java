@@ -1,7 +1,7 @@
-package de.dennis.qlvisualizer;
+package de.dennis.slvisualizer;
 
-import de.dennis.qlvisualizer.Panes.StartScreen;
-import de.dennis.qlvisualizer.Utilities.ConsoleUtilities;
+import de.dennis.slvisualizer.Panes.StartScreen;
+import de.dennis.slvisualizer.Utilities.ConsoleUtilities;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -18,8 +18,8 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
-import static de.dennis.qlvisualizer.Utilities.JavaFXConstructorUtilities.*;
-import static de.dennis.qlvisualizer.Utilities.JavaUtilities.isStringInt;
+import static de.dennis.slvisualizer.Utilities.JavaFXConstructorUtilities.*;
+import static de.dennis.slvisualizer.Utilities.JavaUtilities.isStringInt;
 
 public class Main extends Application {
 
@@ -48,7 +48,7 @@ public class Main extends Application {
         ConsoleUtilities.consoleOutPutLine(ConsoleUtilities.colors.GREEN, ConsoleUtilities.textStyle.REGULAR, "Application started successfully.");
     }
 
-    private static Queue primaryList;
+    private static Stack primaryList;
 
     public static void createPreList() {
         createListView(2, true);
@@ -59,8 +59,8 @@ public class Main extends Application {
 
     public static void createListView(int i, boolean createWithElement) {
 
-        if (createWithElement) primaryList = new Queue(new ListElement(i));
-        else primaryList = new Queue();
+        if (createWithElement) primaryList = new Stack(new ListElement(i));
+        else primaryList = new Stack();
 
         // Input Box
         VBox inputBoxPane = new VBox();

@@ -1,4 +1,4 @@
-package de.dennis.qlvisualizer.Utilities;
+package de.dennis.slvisualizer.Utilities;
 
 
 import javafx.geometry.Point2D;
@@ -8,8 +8,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 
-import static de.dennis.qlvisualizer.Utilities.JavaFXConstructorUtilities.buildRectangle;
-import static de.dennis.qlvisualizer.Utilities.JavaFXConstructorUtilities.buildTriangle;
+import static de.dennis.slvisualizer.Utilities.JavaFXConstructorUtilities.buildRectangle;
+import static de.dennis.slvisualizer.Utilities.JavaFXConstructorUtilities.buildTriangle;
 
 public class ArrowObjekt extends VBox {
 

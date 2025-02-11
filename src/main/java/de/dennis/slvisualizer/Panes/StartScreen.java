@@ -1,6 +1,6 @@
-package de.dennis.qlvisualizer.Panes;
+package de.dennis.slvisualizer.Panes;
 
-import de.dennis.qlvisualizer.Main;
+import de.dennis.slvisualizer.Main;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -9,10 +9,10 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.TextAlignment;
 
-import static de.dennis.qlvisualizer.Utilities.JavaFXConstructorUtilities.buildButton;
-import static de.dennis.qlvisualizer.Utilities.JavaFXConstructorUtilities.buildTextField;
-import static de.dennis.qlvisualizer.Utilities.JavaUtilities.buildLongText;
-import static de.dennis.qlvisualizer.Utilities.JavaUtilities.isStringInt;
+import static de.dennis.slvisualizer.Utilities.JavaFXConstructorUtilities.buildButton;
+import static de.dennis.slvisualizer.Utilities.JavaFXConstructorUtilities.buildTextField;
+import static de.dennis.slvisualizer.Utilities.JavaUtilities.buildLongText;
+import static de.dennis.slvisualizer.Utilities.JavaUtilities.isStringInt;
 
 public class StartScreen extends Pane {
 

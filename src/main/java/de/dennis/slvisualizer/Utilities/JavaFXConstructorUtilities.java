@@ -1,6 +1,6 @@
-package de.dennis.qlvisualizer.Utilities;
+package de.dennis.slvisualizer.Utilities;
 
-import de.dennis.qlvisualizer.Main;
+import de.dennis.slvisualizer.Main;
 import javafx.geometry.Point2D;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;

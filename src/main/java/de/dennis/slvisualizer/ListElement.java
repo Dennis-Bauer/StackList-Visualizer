@@ -1,6 +1,6 @@
-package de.dennis.qlvisualizer;
+package de.dennis.slvisualizer;
 
-import de.dennis.qlvisualizer.Panes.ElementObjekt;
+import de.dennis.slvisualizer.Panes.ElementObjekt;
 
 public class ListElement {
 
