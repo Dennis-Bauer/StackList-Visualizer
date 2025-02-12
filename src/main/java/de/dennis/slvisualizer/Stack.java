@@ -10,8 +10,6 @@ public class Stack extends ScrollPane {
 
     private final ListView LIST_VIEW = new ListView();
 
-    private int listLength;
-
     private ListElement first;
 
     public Stack(ListElement firstElement) {
@@ -27,17 +25,12 @@ public class Stack extends ScrollPane {
         setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
         setMinHeight(Main.WINDOW_HEIGHT * 0.35);
 
-
-        listLength = 0;
-
         first = null;
     }
 
     public void push(ListElement e) {
         if (first == null) addFirstElement(e);
         else {
-            listLength++;
-
             // Reset front() method
             first.getGraphicObject().resetShow();
 
@@ -46,17 +39,15 @@ public class Stack extends ScrollPane {
             e.setNext(first);
             first = e;
 
-            e.getGraphicObject().setPosArrowToFirst();
-            e.getGraphicObject().setPosArrowVisible(true);
+            first.getGraphicObject().setPosArrowToFirst();
+            first.getGraphicObject().setPosArrowVisible(true);
 
-            LIST_VIEW.addNode(e, listLength);
+            LIST_VIEW.addNode(first, 1);
         }
     }
 
     public ListElement pop() {
         if (first != null) {
-            listLength--;
-
             ListElement tmp = first;
 
             first = first.getNext();
@@ -84,8 +75,6 @@ public class Stack extends ScrollPane {
     }
 
     private void addFirstElement(ListElement e) {
-        listLength = 1;
-
         first = e;
 
         e.getGraphicObject().setPosArrowToFirst();

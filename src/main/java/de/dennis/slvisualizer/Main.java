@@ -33,7 +33,7 @@ public class Main extends Application {
     public static final Color FIRST_ARROW_COLOR = Color.BLUE; // Default: BLUE
     public static final Color CONTENT_COLOR_CURRENT = Color.GRAY; // Default: GRAY
     public static final Color CONTENT_COLOR_GOT = Color.WHITE; // Default: WHITE
-    public static final Color CONTENT_COLOR_NOTHING = Color.BLACK; // Default: BLACK
+    public static final Color CONTENT_COLOR_NOTHING = Color.WHITE; // Default: BLACK
 
     private static Scene primaryScene;
 

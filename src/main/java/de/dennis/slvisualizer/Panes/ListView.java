@@ -21,8 +21,7 @@ public class ListView extends HBox {
     public void addNode(ListElement e, int pos) {
         nodeList.add(pos - 1,  e.getGraphicObject());
 
-        if (pos >= getChildren().size()) getChildren().addLast(nodeList.get(pos - 1));
-        else getChildren().add(pos, nodeList.get(pos - 1));
+        getChildren().addFirst(nodeList.get(pos - 1));
     }
 
     public void removeNode(int pos) {
