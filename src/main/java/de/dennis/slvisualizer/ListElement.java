@@ -19,6 +19,8 @@ public class ListElement {
         return objekt;
     }
 
+    public int getContent() { return content; }
+
     public ListElement getNext() {
         return next;
     }

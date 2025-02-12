@@ -3,6 +3,8 @@ package de.dennis.slvisualizer;
 import de.dennis.slvisualizer.Panes.ListView;
 import javafx.scene.control.ScrollPane;
 
+import java.util.List;
+
 
 public class Stack extends ScrollPane {
 
@@ -11,7 +13,6 @@ public class Stack extends ScrollPane {
     private int listLength;
 
     private ListElement first;
-    private ListElement last;
 
     public Stack(ListElement firstElement) {
         setContent(LIST_VIEW);
@@ -30,7 +31,6 @@ public class Stack extends ScrollPane {
         listLength = 0;
 
         first = null;
-        last = null;
     }
 
     public void push(ListElement e) {
@@ -53,43 +53,45 @@ public class Stack extends ScrollPane {
         }
     }
 
-    public void remove() {
+    public ListElement pop() {
         if (first != null) {
             listLength--;
+
+            ListElement tmp = first;
 
             first = first.getNext();
 
             if (first != null) {
-                if (first == last) first.getGraphicObject().setPosArrowToBoth();
-                else first.getGraphicObject().setPosArrowToFirst();
-
+                first.getGraphicObject().setPosArrowToFirst();
                 first.getGraphicObject().setPosArrowVisible(true);
-            } else last = null;
+            }
 
             LIST_VIEW.removeNode(1);
+
+            return tmp;
         }
+        return null;
     }
 
     public boolean isEmpty() {
-        return first == null && last == null;
+        return first == null;
+    }
+
+    public void peek() {
+        if (first != null) {
+            first.getGraphicObject().showContent();
+        }
     }
 
     private void addFirstElement(ListElement e) {
         listLength = 1;
 
         first = e;
-        last = e;
 
-        e.getGraphicObject().setPosArrowToBoth();
+        e.getGraphicObject().setPosArrowToFirst();
         e.getGraphicObject().setPosArrowVisible(true);
 
         LIST_VIEW.addNode(e, 1);
-    }
-
-    public void front() {
-        if (first != null) {
-            first.getGraphicObject().showContent();
-        }
     }
 
 }

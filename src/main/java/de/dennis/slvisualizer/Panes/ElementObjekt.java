@@ -42,7 +42,7 @@ public class ElementObjekt extends HBox {
         StackPane contentRectanglePane = new StackPane(backgroundRectangle, contentLabel);
 
         //Pos Arrow
-        ArrowObjekt posArrowObj = new ArrowObjekt("posArrow", new Point2D(0, 0), Main.WINDOW_HEIGHT * 0.045, Main.WINDOW_WIDTH * 0.01, Main.WINDOW_HEIGHT * 0.03, Main.WINDOW_WIDTH * 0.025, Main.FIRST_LAST_ARROW_COLOR);
+        ArrowObjekt posArrowObj = new ArrowObjekt("posArrow", new Point2D(0, 0), Main.WINDOW_HEIGHT * 0.045, Main.WINDOW_WIDTH * 0.01, Main.WINDOW_HEIGHT * 0.03, Main.WINDOW_WIDTH * 0.025, Main.FIRST_ARROW_COLOR);
         posArrowObj.setRotate(180);
 
         posArrow = new VBox(-0.5, posArrowLabel, posArrowObj);

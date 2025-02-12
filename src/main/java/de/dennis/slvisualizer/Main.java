@@ -30,7 +30,7 @@ public class Main extends Application {
 
     // Debug/Variables
     public static final int MAX_INPUT_LENGTH = 3;
-    public static final Color FIRST_LAST_ARROW_COLOR = Color.BLUE; // Default: BLUE
+    public static final Color FIRST_ARROW_COLOR = Color.BLUE; // Default: BLUE
     public static final Color CONTENT_COLOR_CURRENT = Color.GRAY; // Default: GRAY
     public static final Color CONTENT_COLOR_GOT = Color.WHITE; // Default: WHITE
     public static final Color CONTENT_COLOR_NOTHING = Color.BLACK; // Default: BLACK
@@ -42,7 +42,7 @@ public class Main extends Application {
 
         primaryScene = new Scene(new StartScreen(), WINDOW_WIDTH, WINDOW_HEIGHT);
 
-        stage.setTitle("QueueList-Visualizer");
+        stage.setTitle("StackList-Visualizer");
         stage.setScene(primaryScene);
         stage.show();
         ConsoleUtilities.consoleOutPutLine(ConsoleUtilities.colors.GREEN, ConsoleUtilities.textStyle.REGULAR, "Application started successfully.");
@@ -81,14 +81,13 @@ public class Main extends Application {
         StackPane outputPane = new StackPane(outPutBackground, outputLabel);
 
         // Buttons
-        Button addButton = createStandardButton("enqueue(Content)"); // Here I use the term 'enqueue' because that's how it's written in the doc. To make it easier to read I use 'add', that is exactly what it does.
-        Button removeButton = createStandardButton("dequeue()"); // Here I use the term 'dequeue' because that's how it's written in the doc. To make it easier to read I use 'remove', that is exactly what it does.
+        Button addButton = createStandardButton("push(Content)"); // Here I use the term 'push' because that's how it's written in the doc. To make it easier to read I use 'add', that is exactly what it does.
+        Button removeButton = createStandardButton("pull()"); // Here I use the term 'pull' because that's how it's written in the doc. To make it easier to read I use 'remove', that is exactly what it does.
         Button isEmptyButton = createStandardButton("isEmpty()");
-        Button frontButton = createStandardButton("front()");
+        Button frontButton = createStandardButton("peek()");
 
         // Actions
-        frontButton.setOnMouseClicked(_ -> primaryList.front());
-        removeButton.setOnMouseClicked(_ -> primaryList.remove());
+        frontButton.setOnMouseClicked(_ -> primaryList.peek());
         isEmptyButton.setOnMouseClicked(_ -> {
             if (primaryList.isEmpty()) {
                 outputLabel.setText("Output: true");
@@ -97,6 +96,12 @@ public class Main extends Application {
                 outputLabel.setText("Output: false");
                 outputLabel.setTextFill(Color.RED);
             }
+        });
+        removeButton.setOnMouseClicked(_ -> {
+            int content = primaryList.pop().getContent();
+
+            outputLabel.setText("Output: " + content);
+            outputLabel.setTextFill(Color.BLUE);
         });
 
         // With input
