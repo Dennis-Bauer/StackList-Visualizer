@@ -74,16 +74,6 @@ public class ElementObjekt extends HBox {
         contentArrowObj.setVisible(true);
     }
 
-    public void setPosArrowToLast() {
-        posArrowLabel.setText("Last");
-        contentArrowObj.setVisible(false);
-    }
-
-    public void setPosArrowToBoth() {
-        posArrowLabel.setText("First & Last");
-        contentArrowObj.setVisible(false);
-    }
-
     public void showContent() {
         contentLabel.setTextFill(Main.CONTENT_COLOR_GOT);
     }
