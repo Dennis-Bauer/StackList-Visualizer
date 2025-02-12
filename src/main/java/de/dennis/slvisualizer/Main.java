@@ -33,7 +33,7 @@ public class Main extends Application {
     public static final Color FIRST_ARROW_COLOR = Color.BLUE; // Default: BLUE
     public static final Color CONTENT_COLOR_CURRENT = Color.GRAY; // Default: GRAY
     public static final Color CONTENT_COLOR_GOT = Color.WHITE; // Default: WHITE
-    public static final Color CONTENT_COLOR_NOTHING = Color.WHITE; // Default: BLACK
+    public static final Color CONTENT_COLOR_NOTHING = Color.BLACK; // Default: BLACK
 
     private static Scene primaryScene;
 
@@ -108,6 +108,10 @@ public class Main extends Application {
         addButton.setOnMouseClicked(_ -> {
             if (!inputBox.getText().isEmpty() && isStringInt(inputBox.getText()) && inputBox.getText().length() <= Main.MAX_INPUT_LENGTH)
                 primaryList.push(new ListElement(Integer.parseInt(inputBox.getText())));
+
+            // Reset output label
+            outputLabel.setText("Output:");
+            outputLabel.setTextFill(Color.BLACK);
         });
 
         double buttonSpacing = WINDOW_HEIGHT * 0.01;
