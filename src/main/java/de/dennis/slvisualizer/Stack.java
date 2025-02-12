@@ -33,7 +33,7 @@ public class Stack extends ScrollPane {
         last = null;
     }
 
-    public void add(ListElement e) {
+    public void push(ListElement e) {
         if (first == null) addFirstElement(e);
         else {
             listLength++;
@@ -41,14 +41,13 @@ public class Stack extends ScrollPane {
             // Reset front() method
             first.getGraphicObject().resetShow();
 
-            if (last == first) last.getGraphicObject().setPosArrowToFirst();
-            else last.getGraphicObject().setPosArrowVisible(false);
+            first.getGraphicObject().setPosArrowVisible(false);
 
-            last.setNext(e);
-            last = e;
+            e.setNext(first);
+            first = e;
 
-            last.getGraphicObject().setPosArrowToLast();
-            last.getGraphicObject().setPosArrowVisible(true);
+            e.getGraphicObject().setPosArrowToFirst();
+            e.getGraphicObject().setPosArrowVisible(true);
 
             LIST_VIEW.addNode(e, listLength);
         }

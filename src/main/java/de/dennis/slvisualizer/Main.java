@@ -54,7 +54,7 @@ public class Main extends Application {
         createListView(2, true);
 
         for (int i = 0; i < 8; i++)
-            primaryList.add(new ListElement((i * 2) + 3));
+            primaryList.push(new ListElement((i * 2) + 3));
     }
 
     public static void createListView(int i, boolean createWithElement) {
@@ -102,7 +102,7 @@ public class Main extends Application {
         // With input
         addButton.setOnMouseClicked(_ -> {
             if (!inputBox.getText().isEmpty() && isStringInt(inputBox.getText()) && inputBox.getText().length() <= Main.MAX_INPUT_LENGTH)
-                primaryList.add(new ListElement(Integer.parseInt(inputBox.getText())));
+                primaryList.push(new ListElement(Integer.parseInt(inputBox.getText())));
         });
 
         double buttonSpacing = WINDOW_HEIGHT * 0.01;
