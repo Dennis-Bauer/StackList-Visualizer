@@ -20,8 +20,8 @@ public class StartScreen extends Pane {
     private final double BUTTON_X = Main.WINDOW_WIDTH / 2 - BUTTON_WIDTH / 2;
 
     public StartScreen() {
-        Button creatListButton = buildButton("createListButton", "Erstelle Queue", BUTTON_WIDTH, Main.WINDOW_HEIGHT / 4, Font.font(Main.TEXT_FONT, FontWeight.BOLD, Main.FONT_SIZE * 2), BUTTON_X, Main.WINDOW_HEIGHT * 0.2);
-        Button loadPreList = buildButton("loadPreListButton", "Lade Test Queue", BUTTON_WIDTH, Main.WINDOW_HEIGHT / 4, Font.font(Main.TEXT_FONT, FontWeight.BOLD, Main.FONT_SIZE * 2), BUTTON_X, Main.WINDOW_HEIGHT * 0.5);
+        Button creatListButton = buildButton("createListButton", "Erstelle Stack", BUTTON_WIDTH, Main.WINDOW_HEIGHT / 4, Font.font(Main.TEXT_FONT, FontWeight.BOLD, Main.FONT_SIZE * 2), BUTTON_X, Main.WINDOW_HEIGHT * 0.2);
+        Button loadPreList = buildButton("loadPreListButton", "Lade Test Stack", BUTTON_WIDTH, Main.WINDOW_HEIGHT / 4, Font.font(Main.TEXT_FONT, FontWeight.BOLD, Main.FONT_SIZE * 2), BUTTON_X, Main.WINDOW_HEIGHT * 0.5);
 
         getChildren().addAll(creatListButton, loadPreList);
 
@@ -33,11 +33,11 @@ public class StartScreen extends Pane {
     private void showCreateMenu() {
         getChildren().clear();
 
-        Button createListWithElement = buildButton("createListButton_WithElement", buildLongText("Erstelle Queue mit Element", "public Queue(ListElement firstElement)"), BUTTON_WIDTH * 1.25, Main.WINDOW_HEIGHT * 0.25, Font.font(Main.TEXT_FONT, FontWeight.BOLD, Main.FONT_SIZE) , BUTTON_X - (BUTTON_WIDTH * 0.25) / 2, Main.WINDOW_HEIGHT * 0.2);
+        Button createListWithElement = buildButton("createListButton_WithElement", buildLongText("Erstelle Stack mit Element", "public Stack(ListElement listElement)"), BUTTON_WIDTH * 1.25, Main.WINDOW_HEIGHT * 0.25, Font.font(Main.TEXT_FONT, FontWeight.BOLD, Main.FONT_SIZE) , BUTTON_X - (BUTTON_WIDTH * 0.25) / 2, Main.WINDOW_HEIGHT * 0.2);
         createListWithElement.setTextAlignment(TextAlignment.CENTER);
         createListWithElement.setOnMouseClicked(_ -> createListWithElement());
 
-        Button createListWithOutElement = buildButton("createListButton_WithOutElement", buildLongText("Erstelle Queue ohne Element", "public Queue()"), BUTTON_WIDTH, Main.WINDOW_HEIGHT * 0.25, Font.font(Main.TEXT_FONT, FontWeight.BOLD, Main.FONT_SIZE) , BUTTON_X, Main.WINDOW_HEIGHT * 0.5);
+        Button createListWithOutElement = buildButton("createListButton_WithOutElement", buildLongText("Erstelle Stack ohne Element", "public Stack()"), BUTTON_WIDTH, Main.WINDOW_HEIGHT * 0.25, Font.font(Main.TEXT_FONT, FontWeight.BOLD, Main.FONT_SIZE) , BUTTON_X, Main.WINDOW_HEIGHT * 0.5);
         createListWithOutElement.setTextAlignment(TextAlignment.CENTER);
         createListWithOutElement.setOnMouseClicked(_ -> createList());
 
@@ -50,7 +50,7 @@ public class StartScreen extends Pane {
         TextField inputBox = buildTextField("inputListWithElement", "int", BUTTON_WIDTH * 0.5, Main.WINDOW_HEIGHT * 0.3, BUTTON_X + (BUTTON_WIDTH * 0.5) / 2, Main.WINDOW_HEIGHT * 0.1);
         inputBox.setAlignment(Pos.CENTER);
 
-        Button createList = buildButton("createListButton", "Erstelle Queue", BUTTON_WIDTH, Main.WINDOW_HEIGHT * 0.2, Font.font(Main.TEXT_FONT, FontWeight.BOLD, Main.FONT_SIZE * 2) , BUTTON_X, Main.WINDOW_HEIGHT * 0.55);
+        Button createList = buildButton("createListButton", "Erstelle Stack", BUTTON_WIDTH, Main.WINDOW_HEIGHT * 0.2, Font.font(Main.TEXT_FONT, FontWeight.BOLD, Main.FONT_SIZE * 2) , BUTTON_X, Main.WINDOW_HEIGHT * 0.55);
         createList.setOnMouseClicked(_ -> {
             if (!inputBox.getText().isEmpty() && isStringInt(inputBox.getText()) && inputBox.getText().length() <= Main.MAX_INPUT_LENGTH)
                 Main.createListView(Integer.parseInt(inputBox.getText()), true);
