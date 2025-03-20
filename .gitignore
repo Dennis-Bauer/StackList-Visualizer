@@ -1,5 +1,12 @@
 # Compiled class file
 *.class
+*.DS_Store
+
+# Maven
+target/
+*.xml
+
+.gitignore
 
 # Log file
 *.log
@@ -8,7 +15,7 @@
 *.ctxt
 
 # Mobile Tools for Java (J2ME)
-.mtj.tmp
+.mtj.tmp/
 
 # Package Files #
 *.war
@@ -17,6 +24,7 @@
 *.zip
 *.tar.gz
 *.rar
+*.MF
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
